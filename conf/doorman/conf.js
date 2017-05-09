@@ -112,5 +112,14 @@ if(modules.indexOf('google') >= 0) {
   };
 }
 
-module.exports = conf;
+// ==================
+// IP addresses
+// ==================
 
+if(modules.indexOf('ip') >= 0) {
+  conf.modules.ip = {
+    ranges: process.env.DOORMAN_IP_RANGES
+  };
+}
+
+module.exports = conf;

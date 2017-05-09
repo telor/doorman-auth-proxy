@@ -16,7 +16,7 @@ RUN apt-get update && apt-get upgrade -y && \
 # Clone doorman repo and initialize npm packages
 #
 RUN apt-get -y --no-install-recommends install git  && \
-    git clone --single-branch --branch master https://github.com/movableink/doorman.git && \
+    git clone --single-branch --branch master https://github.com/telor/doorman.git && \
     cd /doorman && \
     npm install
 
@@ -38,5 +38,3 @@ RUN chmod 755 /scripts/*.sh
 
 # Default command
 CMD ["/scripts/start.sh"]
-
-
